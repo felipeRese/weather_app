@@ -1,14 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import {
-  KeyboardEvent,
-  KeyboardEventHandler,
-  useEffect,
-  useState,
-} from "react";
-import Image from "next/image";
+import { KeyboardEvent, useEffect, useState } from "react";
 import axios from "axios";
-import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 
 export default function Home() {
   const [dark, setDark] = useState(true);
@@ -76,7 +69,7 @@ export default function Home() {
               Search
             </button>
           </div>
-          <div className="mt-36 flex flex-row h-[20rem] w-[40rem]">
+          <div className="mt-36 flex flex-row bg-zinc-200 dark:bg-gray-800 rounded-2xl p-9 h-[20rem] w-[40rem]">
             <div className="flex flex-col w-5/6 h-full">
               <div className="flex flex-row items-center h-fit">
                 <img
