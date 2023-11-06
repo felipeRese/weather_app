@@ -1,6 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { useEffect, useState } from "react";
+import {
+  KeyboardEvent,
+  KeyboardEventHandler,
+  useEffect,
+  useState,
+} from "react";
 import Image from "next/image";
 import axios from "axios";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
@@ -38,7 +43,7 @@ export default function Home() {
       console.log(error);
     }
   }
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === "Enter") {
       getWeather();
     }
