@@ -16,7 +16,7 @@ export default function Home() {
 
   async function getDefaultCity() {
     const a: any = await axios.get(
-      `http://api.weatherapi.com/v1/current.json?key=4ab6aa15014d4c61bed234104230411&q=Belo-horizonte&aqi=no`
+      `//api.weatherapi.com/v1/current.json?key=4ab6aa15014d4c61bed234104230411&q=Belo-horizonte&aqi=no`
     );
     return a.data;
   }
@@ -36,7 +36,7 @@ export default function Home() {
   async function getWeather() {
     try {
       const d: any = await axios.get(
-        `http://api.weatherapi.com/v1/current.json?key=4ab6aa15014d4c61bed234104230411&q=${city}&aqi=no`
+        `//api.weatherapi.com/v1/current.json?key=4ab6aa15014d4c61bed234104230411&q=${city}&aqi=no`
       );
       setData(d.data);
     } catch (error) {
@@ -80,7 +80,7 @@ export default function Home() {
             <div className="flex flex-col w-5/6 h-full">
               <div className="flex flex-row items-center h-fit">
                 <img
-                  src={data ? "http:" + data.current.condition.icon : ""}
+                  src={data ? data.current.condition.icon : ""}
                   className="w-[5rem] h-[5rem]"
                   alt=""
                 ></img>
